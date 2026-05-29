@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Zenvix Labs — Site institucional
 
-## Getting Started
+Landing page institucional da **Zenvix Labs**, desenvolvida com Next.js 16 e Tailwind CSS 4.
 
-First, run the development server:
+**Domínio de produção:** [zenvixlabs.app](https://zenvixlabs.app)
+
+## Produtos destacados
+
+| Produto       | Caminho        | Site                    |
+| ------------- | -------------- | ----------------------- |
+| CT095         | `/ct095`       | [ct095.com](https://www.ct095.com) |
+| Konta         | `/konta`       | [daylize.com](https://www.daylize.com) |
+| Zenvix Store  | `/zenvix-store`| [zenvixfotos.com](https://zenvixfotos.com) |
+
+## Desenvolvimento local
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deploy na Vercel
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Crie um repositório no GitHub e envie este projeto:
 
-## Learn More
+   ```bash
+   git remote add origin git@github.com:SEU_USUARIO/zenvixlabs-website.git
+   git push -u origin main
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. Em [vercel.com/new](https://vercel.com/new), importe o repositório.
+3. Framework preset: **Next.js** (detectado automaticamente).
+4. Em **Domains**, adicione `zenvixlabs.app` e configure o DNS conforme a Vercel indicar.
+5. Deploy — cada push em `main` gera um novo deploy.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Estrutura
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+src/
+  app/          # layout, página principal, estilos globais
+  components/   # Header, Hero, About, Products, Contact, Footer
+  lib/          # dados dos produtos
+```
 
-## Deploy on Vercel
+## Contato
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+O e-mail exibido no site é `contato@zenvixlabs.app`. Ajuste em `src/components/contact.tsx` se necessário.

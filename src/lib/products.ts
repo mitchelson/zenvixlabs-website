@@ -8,6 +8,8 @@ export type Product = {
   tags: string[];
   accent: string;
   stack: string;
+  image: string;
+  visual: "photo" | "phone" | "chat" | "og" | "boxes";
 };
 
 export const products: Product[] = [
@@ -22,6 +24,8 @@ export const products: Product[] = [
     tags: ["Web", "Mobile", "Consumo"],
     accent: "#1f8a4c",
     stack: "Next.js · Expo · NestJS",
+    image: "/work/ta-na-promo.webp",
+    visual: "photo",
   },
   {
     id: "selah",
@@ -34,6 +38,8 @@ export const products: Product[] = [
     tags: ["Mobile", "iOS", "Fé"],
     accent: "#d4552a",
     stack: "Expo · Firebase · Cloudflare",
+    image: "/work/selah.png",
+    visual: "phone",
   },
   {
     id: "whatsapp-viewer",
@@ -46,6 +52,8 @@ export const products: Product[] = [
     tags: ["Web", "Privacidade", "Ferramenta"],
     accent: "#0f766e",
     stack: "Astro · Preact · Web Worker",
+    image: "/work/whatsapp-viewer.png",
+    visual: "chat",
   },
   {
     id: "zenvix-store",
@@ -58,6 +66,8 @@ export const products: Product[] = [
     tags: ["Web", "IA", "E-commerce"],
     accent: "#6d28d9",
     stack: "Next.js · IA · Cloud",
+    image: "/work/zenvix-store.png",
+    visual: "og",
   },
   {
     id: "konta",
@@ -68,7 +78,9 @@ export const products: Product[] = [
     href: "https://konta.zenvixlabs.app",
     path: "/konta",
     tags: ["Mobile", "iOS", "Finanças"],
-    accent: "#1d4ed8",
+    accent: "#b4f54a",
     stack: "iOS · Mobile",
+    image: "/work/konta.png",
+    visual: "boxes",
   },
 ];

@@ -90,13 +90,40 @@ body {
   animation-delay: 0.28s;
 }
 
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.float {
+  animation: float 5.5s ease-in-out infinite;
+}
+
+.float-delay {
+  animation: float 6.5s ease-in-out infinite;
+  animation-delay: -2.4s;
+}
+
+.phone-shadow {
+  box-shadow:
+    0 40px 80px -24px rgb(0 0 0 / 0.45),
+    0 12px 28px -12px rgb(0 0 0 / 0.3);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
 
   .marquee-track,
-  .rise {
+  .rise,
+  .float,
+  .float-delay {
     animation: none;
   }
 }

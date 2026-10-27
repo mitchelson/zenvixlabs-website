@@ -1,29 +1,27 @@
 import Link from "next/link";
 import { products } from "@/lib/products";
+import { HeroStage } from "@/components/mocks";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden pt-28 pb-16 md:pt-36 md:pb-24">
-      <div className="mx-auto grid max-w-6xl items-end gap-12 px-6 lg:grid-cols-[1.4fr_0.8fr]">
-        <div>
+    <section className="relative overflow-hidden pt-20 md:pt-24">
+      <div className="mx-auto grid max-w-6xl items-center gap-8 px-6 lg:grid-cols-[1fr_1.05fr] lg:gap-4">
+        <div className="relative z-10 pt-8 pb-4 lg:pb-16">
           <p className="rise font-mono text-[11px] uppercase tracking-[0.28em] text-muted">
-            Estúdio de software · Boa Vista / remoto
+            Estúdio de software · produtos no ar
           </p>
-          <h1 className="rise rise-delay-1 mt-6 font-display text-[clamp(3.2rem,9vw,7.5rem)] leading-[0.88] tracking-tight text-ink">
+          <h1 className="rise rise-delay-1 mt-5 font-display text-[clamp(2.8rem,8vw,6.4rem)] leading-[0.88] tracking-tight text-ink">
             Produtos
             <br />
             digitais
             <br />
             <em className="text-accent">com pulso.</em>
           </h1>
-        </div>
-
-        <div className="rise rise-delay-2 max-w-md pb-2 lg:justify-self-end">
-          <p className="text-lg leading-relaxed text-muted md:text-xl">
-            Projetamos, construímos e operamos plataformas que as pessoas abrem
-            de verdade — do app no bolso à API na nuvem.
+          <p className="rise rise-delay-2 mt-6 max-w-md text-lg leading-relaxed text-muted">
+            Não é slide. São apps e plataformas que as pessoas abrem — mercado,
+            fé, conversa, foto, dinheiro.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="rise rise-delay-3 mt-8 flex flex-wrap gap-3">
             <Link
               href="#trabalho"
               className="inline-flex items-center rounded-full bg-ink px-5 py-2.5 text-sm font-medium text-background transition hover:bg-accent"
@@ -38,9 +36,12 @@ export function Hero() {
             </Link>
           </div>
         </div>
+        <div className="rise rise-delay-2">
+          <HeroStage />
+        </div>
       </div>
 
-      <dl className="rise rise-delay-3 mx-auto mt-16 grid max-w-6xl grid-cols-2 gap-px border-y border-line bg-line sm:grid-cols-4">
+      <dl className="mx-auto mt-6 grid max-w-6xl grid-cols-2 gap-px border-y border-line bg-line sm:grid-cols-4">
         {[
           { value: String(products.length), label: "Produtos no ar" },
           { value: "Web + app", label: "Do clique ao nativo" },
@@ -49,7 +50,7 @@ export function Hero() {
         ].map((stat) => (
           <div
             key={stat.label}
-            className="bg-background px-6 py-6 sm:px-8 sm:py-8"
+            className="bg-background px-6 py-6 sm:px-8 sm:py-7"
           >
             <dt className="font-display text-2xl tracking-tight text-ink sm:text-3xl">
               {stat.value}

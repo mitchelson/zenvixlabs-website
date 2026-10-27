@@ -10,24 +10,34 @@ export type Product = {
 
 export const products: Product[] = [
   {
-    id: "ct095",
-    name: "CT095",
-    tagline: "Gestão esportiva e escolar",
+    id: "ta-na-promo",
+    name: "Tá na Promo",
+    tagline: "Promoções de supermercado no mesmo lugar",
     description:
-      "Plataforma completa para escolas de futevôlei e centros de treinamento — alunos, turmas, créditos, pagamentos e operação do dia a dia.",
-    href: "https://www.ct095.com",
-    path: "/ct095",
-    tags: ["Web", "SaaS", "Esportes"],
+      "App e site para descobrir e comparar ofertas de mercados locais — encartes, listas de compra e preços atualizados automaticamente.",
+    href: "https://www.tanapromo.app",
+    path: "/ta-na-promo",
+    tags: ["Web", "Mobile", "Consumo"],
   },
   {
-    id: "konta",
-    name: "Konta",
-    tagline: "Finanças pessoais no seu bolso",
+    id: "selah",
+    name: "Selah",
+    tagline: "Pare. Medite. Caminhe em comunidade.",
     description:
-      "App de controle financeiro com metas, cofrinhos e insights. Disponível na Daylize para organizar gastos com simplicidade.",
-    href: "https://www.daylize.com",
-    path: "/konta",
-    tags: ["Mobile", "iOS", "Finanças"],
+      "Check-in devocional em grupo com foto, insight e leitura bíblica, ranking de constância, desafios do calendário cristão e mural de oração.",
+    href: "https://selah.zenvixlabs.app",
+    path: "/selah",
+    tags: ["Mobile", "iOS", "Fé"],
+  },
+  {
+    id: "whatsapp-viewer",
+    name: "WhatsApp Viewer",
+    tagline: "Suas conversas, só no seu navegador",
+    description:
+      "Visualizador de exportações do WhatsApp 100% local — abre .txt ou .zip com mídia, busca, filtros e PDF, sem enviar nada para servidor.",
+    href: "https://whatsappviewer.zenvixlabs.app",
+    path: "/whatsapp-viewer",
+    tags: ["Web", "Privacidade", "Ferramenta"],
   },
   {
     id: "zenvix-store",
@@ -38,5 +48,15 @@ export const products: Product[] = [
     href: "https://zenvixfotos.com",
     path: "/zenvix-store",
     tags: ["Web", "IA", "E-commerce"],
+  },
+  {
+    id: "konta",
+    name: "Konta",
+    tagline: "Finanças pessoais no seu bolso",
+    description:
+      "App de controle financeiro com metas, cofrinhos e insights. Disponível na Daylize para organizar gastos com simplicidade.",
+    href: "https://www.daylize.com",
+    path: "/konta",
+    tags: ["Mobile", "iOS", "Finanças"],
   },
 ];

@@ -21,7 +21,7 @@ export function Products() {
           </div>
         </div>
 
-        <ul className="mt-12 grid gap-6 lg:grid-cols-3">
+        <ul className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {products.map((product) => (
             <li
               key={product.id}

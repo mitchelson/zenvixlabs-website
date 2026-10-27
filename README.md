@@ -6,11 +6,13 @@ Landing page institucional da **Zenvix Labs**, desenvolvida com Next.js 16 e Tai
 
 ## Produtos destacados
 
-| Produto       | Caminho        | Site                    |
-| ------------- | -------------- | ----------------------- |
-| CT095         | `/ct095`       | [ct095.com](https://www.ct095.com) |
-| Konta         | `/konta`       | [daylize.com](https://www.daylize.com) |
-| Zenvix Store  | `/zenvix-store`| [zenvixfotos.com](https://zenvixfotos.com) |
+| Produto          | Caminho             | Site |
+| ---------------- | ------------------- | ---- |
+| Tá na Promo      | `/ta-na-promo`      | [tanapromo.app](https://www.tanapromo.app) |
+| Selah            | `/selah`            | [selah.zenvixlabs.app](https://selah.zenvixlabs.app) |
+| WhatsApp Viewer  | `/whatsapp-viewer`  | [whatsappviewer.zenvixlabs.app](https://whatsappviewer.zenvixlabs.app) |
+| Zenvix Store     | `/zenvix-store`     | [zenvixfotos.com](https://zenvixfotos.com) |
+| Konta            | `/konta`            | [daylize.com](https://www.daylize.com) |
 
 ## Desenvolvimento local
 

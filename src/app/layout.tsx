@@ -20,12 +20,14 @@ export const metadata: Metadata = {
     template: "%s | Zenvix Labs",
   },
   description:
-    "Zenvix Labs — estúdio de desenvolvimento de software. CT095, Konta (Daylize) e Zenvix Store.",
+    "Zenvix Labs — estúdio de desenvolvimento de software. Tá na Promo, Selah, WhatsApp Viewer, Konta e Zenvix Store.",
   keywords: [
     "Zenvix Labs",
     "desenvolvimento de software",
     "SaaS",
-    "CT095",
+    "Tá na Promo",
+    "Selah",
+    "WhatsApp Viewer",
     "Konta",
     "Daylize",
     "Zenvix Store",

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, Code2, Sparkles } from "lucide-react";
+import { products } from "@/lib/products";
 
 export function Hero() {
   return (
@@ -42,7 +43,7 @@ export function Hero() {
 
         <dl className="mt-16 grid grid-cols-2 gap-6 border-t border-card-border pt-10 sm:grid-cols-3">
           {[
-            { value: "3+", label: "Produtos ativos" },
+            { value: String(products.length), label: "Produtos ativos" },
             { value: "Full-stack", label: "Web & Mobile" },
             { value: "Cloud", label: "Deploy & escala" },
           ].map((stat) => (

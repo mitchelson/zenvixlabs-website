@@ -64,11 +64,11 @@ export const products: Product[] = [
     name: "Konta",
     tagline: "Finanças pessoais no seu bolso",
     description:
-      "App de controle financeiro com metas, cofrinhos e insights. Disponível na Daylize para organizar gastos com simplicidade.",
-    href: "https://www.daylize.com",
+      "App de controle financeiro com metas, cofrinhos e insights para organizar gastos com simplicidade.",
+    href: "https://konta.zenvixlabs.app",
     path: "/konta",
     tags: ["Mobile", "iOS", "Finanças"],
     accent: "#1d4ed8",
-    stack: "iOS · Daylize",
+    stack: "iOS · Mobile",
   },
 ];

@@ -12,7 +12,7 @@ Landing institucional da **Zenvix Labs** — estúdio editorial em Next.js 16 e 
 | Selah            | `/selah`            | [selah.zenvixlabs.app](https://selah.zenvixlabs.app) |
 | WhatsApp Viewer  | `/whatsapp-viewer`  | [whatsappviewer.zenvixlabs.app](https://whatsappviewer.zenvixlabs.app) |
 | Zenvix Store     | `/zenvix-store`     | [zenvixfotos.com](https://zenvixfotos.com) |
-| Konta            | `/konta`            | [daylize.com](https://www.daylize.com) |
+| Konta            | `/konta`            | [konta.zenvixlabs.app](https://konta.zenvixlabs.app) |
 
 ## Desenvolvimento local
 

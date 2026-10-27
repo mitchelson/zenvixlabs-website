@@ -6,6 +6,8 @@ export type Product = {
   href: string;
   path: string;
   tags: string[];
+  accent: string;
+  stack: string;
 };
 
 export const products: Product[] = [
@@ -18,6 +20,8 @@ export const products: Product[] = [
     href: "https://www.tanapromo.app",
     path: "/ta-na-promo",
     tags: ["Web", "Mobile", "Consumo"],
+    accent: "#1f8a4c",
+    stack: "Next.js · Expo · NestJS",
   },
   {
     id: "selah",
@@ -28,6 +32,8 @@ export const products: Product[] = [
     href: "https://selah.zenvixlabs.app",
     path: "/selah",
     tags: ["Mobile", "iOS", "Fé"],
+    accent: "#d4552a",
+    stack: "Expo · Firebase · Cloudflare",
   },
   {
     id: "whatsapp-viewer",
@@ -38,6 +44,8 @@ export const products: Product[] = [
     href: "https://whatsappviewer.zenvixlabs.app",
     path: "/whatsapp-viewer",
     tags: ["Web", "Privacidade", "Ferramenta"],
+    accent: "#0f766e",
+    stack: "Astro · Preact · Web Worker",
   },
   {
     id: "zenvix-store",
@@ -48,6 +56,8 @@ export const products: Product[] = [
     href: "https://zenvixfotos.com",
     path: "/zenvix-store",
     tags: ["Web", "IA", "E-commerce"],
+    accent: "#6d28d9",
+    stack: "Next.js · IA · Cloud",
   },
   {
     id: "konta",
@@ -58,5 +68,7 @@ export const products: Product[] = [
     href: "https://www.daylize.com",
     path: "/konta",
     tags: ["Mobile", "iOS", "Finanças"],
+    accent: "#1d4ed8",
+    stack: "iOS · Daylize",
   },
 ];

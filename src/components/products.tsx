@@ -1,77 +1,70 @@
 import Link from "next/link";
-import { ArrowUpRight, ExternalLink } from "lucide-react";
 import { products } from "@/lib/products";
 
 export function Products() {
   return (
-    <section id="produtos" className="py-20 md:py-28">
-      <div className="mx-auto max-w-6xl px-6">
+    <section id="trabalho" className="scroll-mt-16">
+      <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="text-sm font-medium uppercase tracking-widest text-accent-bright">
-              Portfólio
+            <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-muted">
+              001 — Trabalho
             </p>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">
-              Nossos produtos
+            <h2 className="mt-3 font-display text-4xl tracking-tight text-ink md:text-5xl">
+              No ar, com nome e domínio.
             </h2>
-            <p className="mt-3 max-w-xl text-muted">
-              Soluções que desenvolvemos e operamos — cada uma com stack e
-              domínio próprios, unidas pela mesma visão de qualidade.
-            </p>
           </div>
+          <p className="max-w-sm text-sm leading-relaxed text-muted md:text-right">
+            Cada produto abaixo está publicado. Não é deck: é o que opera hoje.
+          </p>
         </div>
+      </div>
 
-        <ul className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {products.map((product) => (
-            <li
-              key={product.id}
-              className="group flex flex-col rounded-2xl border border-card-border bg-card p-6 transition hover:border-accent/50 hover:shadow-xl hover:shadow-accent-glow/10"
+      <ol className="border-t border-line">
+        {products.map((product, index) => (
+          <li key={product.id} className="border-b border-line">
+            <Link
+              href={product.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block"
+              style={{ ["--work-accent" as string]: product.accent }}
             >
-              <div className="flex items-start justify-between gap-3">
-                <div>
-                  <p className="font-mono text-xs text-accent-bright">
-                    {product.path}
+              <article className="relative mx-auto grid max-w-6xl gap-6 px-6 py-10 transition-colors md:grid-cols-[auto_1fr_auto] md:items-start md:gap-10 md:py-12">
+                <span
+                  aria-hidden
+                  className="absolute inset-y-0 left-0 w-0 bg-[var(--work-accent)] transition-[width] duration-300 group-hover:w-1.5"
+                />
+                <span className="font-mono text-xs text-muted">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <div className="min-w-0">
+                  <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+                    <h3 className="font-display text-3xl tracking-tight text-ink md:text-4xl">
+                      {product.name}
+                    </h3>
+                    <p className="text-sm text-accent">{product.tagline}</p>
+                  </div>
+                  <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-muted">
+                    {product.description}
                   </p>
-                  <h3 className="mt-1 text-xl font-bold text-foreground">
-                    {product.name}
-                  </h3>
-                  <p className="mt-1 text-sm text-accent-bright">
-                    {product.tagline}
+                  <p className="mt-4 font-mono text-[11px] uppercase tracking-wider text-muted">
+                    {product.stack}
+                    <span className="mx-2 text-line">/</span>
+                    {product.tags.join(" · ")}
                   </p>
                 </div>
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-accent-glow/30 to-gradient-end/30 text-accent-bright transition group-hover:from-accent group-hover:to-gradient-end group-hover:text-white">
-                  <ArrowUpRight className="h-5 w-5" aria-hidden />
-                </span>
-              </div>
-
-              <p className="mt-4 flex-1 text-sm leading-relaxed text-muted">
-                {product.description}
-              </p>
-
-              <div className="mt-4 flex flex-wrap gap-2">
-                {product.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-full border border-card-border bg-background/60 px-2.5 py-0.5 text-xs text-muted"
-                  >
-                    {tag}
+                <span className="inline-flex items-center self-start text-sm font-medium text-ink transition group-hover:text-accent">
+                  Abrir
+                  <span className="ml-2 transition-transform group-hover:translate-x-1 group-hover:-translate-y-0.5">
+                    ↗
                   </span>
-                ))}
-              </div>
-
-              <Link
-                href={product.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-accent-bright transition hover:text-foreground"
-              >
-                Visitar site
-                <ExternalLink className="h-4 w-4" aria-hidden />
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
+                </span>
+              </article>
+            </Link>
+          </li>
+        ))}
+      </ol>
     </section>
   );
 }

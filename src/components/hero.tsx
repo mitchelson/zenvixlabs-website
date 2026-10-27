@@ -1,61 +1,63 @@
 import Link from "next/link";
-import { ArrowRight, Code2, Sparkles } from "lucide-react";
 import { products } from "@/lib/products";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden pt-28 pb-20 md:pt-36 md:pb-28">
-      <div className="pointer-events-none absolute inset-0 grid-bg opacity-60" />
-      <div className="pointer-events-none absolute -top-32 left-1/2 h-[480px] w-[480px] -translate-x-1/2 glow-orb" />
-
-      <div className="relative mx-auto max-w-6xl px-6">
-        <div className="inline-flex items-center gap-2 rounded-full border border-card-border bg-card/80 px-4 py-1.5 text-sm text-muted backdrop-blur">
-          <Sparkles className="h-4 w-4 text-accent-bright" aria-hidden />
-          Desenvolvimento de software sob medida
+    <section className="relative overflow-hidden pt-28 pb-16 md:pt-36 md:pb-24">
+      <div className="mx-auto grid max-w-6xl items-end gap-12 px-6 lg:grid-cols-[1.4fr_0.8fr]">
+        <div>
+          <p className="rise font-mono text-[11px] uppercase tracking-[0.28em] text-muted">
+            Estúdio de software · Boa Vista / remoto
+          </p>
+          <h1 className="rise rise-delay-1 mt-6 font-display text-[clamp(3.2rem,9vw,7.5rem)] leading-[0.88] tracking-tight text-ink">
+            Produtos
+            <br />
+            digitais
+            <br />
+            <em className="text-accent">com pulso.</em>
+          </h1>
         </div>
 
-        <h1 className="mt-8 max-w-3xl text-4xl font-bold leading-tight tracking-tight md:text-6xl md:leading-[1.1]">
-          Tecnologia que transforma{" "}
-          <span className="text-gradient">ideias em produtos</span>
-        </h1>
-
-        <p className="mt-6 max-w-2xl text-lg text-muted md:text-xl">
-          A Zenvix Labs projeta e constrói plataformas digitais — do mobile ao
-          cloud — com foco em experiência, performance e escala.
-        </p>
-
-        <div className="mt-10 flex flex-wrap gap-4">
-          <Link
-            href="#produtos"
-            className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-accent-glow/30 transition hover:bg-accent-bright"
-          >
-            Conheça nossos produtos
-            <ArrowRight className="h-4 w-4" aria-hidden />
-          </Link>
-          <Link
-            href="#contato"
-            className="inline-flex items-center gap-2 rounded-full border border-card-border bg-card/60 px-6 py-3 text-sm font-medium text-foreground backdrop-blur transition hover:border-accent/50 hover:bg-card"
-          >
-            <Code2 className="h-4 w-4 text-accent-bright" aria-hidden />
-            Solicitar projeto
-          </Link>
+        <div className="rise rise-delay-2 max-w-md pb-2 lg:justify-self-end">
+          <p className="text-lg leading-relaxed text-muted md:text-xl">
+            Projetamos, construímos e operamos plataformas que as pessoas abrem
+            de verdade — do app no bolso à API na nuvem.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Link
+              href="#trabalho"
+              className="inline-flex items-center rounded-full bg-ink px-5 py-2.5 text-sm font-medium text-background transition hover:bg-accent"
+            >
+              Ver o trabalho
+            </Link>
+            <Link
+              href="#contato"
+              className="inline-flex items-center rounded-full border border-line px-5 py-2.5 text-sm font-medium text-ink transition hover:border-ink"
+            >
+              Briefing
+            </Link>
+          </div>
         </div>
-
-        <dl className="mt-16 grid grid-cols-2 gap-6 border-t border-card-border pt-10 sm:grid-cols-3">
-          {[
-            { value: String(products.length), label: "Produtos ativos" },
-            { value: "Full-stack", label: "Web & Mobile" },
-            { value: "Cloud", label: "Deploy & escala" },
-          ].map((stat) => (
-            <div key={stat.label}>
-              <dt className="text-2xl font-bold text-accent-bright md:text-3xl">
-                {stat.value}
-              </dt>
-              <dd className="mt-1 text-sm text-muted">{stat.label}</dd>
-            </div>
-          ))}
-        </dl>
       </div>
+
+      <dl className="rise rise-delay-3 mx-auto mt-16 grid max-w-6xl grid-cols-2 gap-px border-y border-line bg-line sm:grid-cols-4">
+        {[
+          { value: String(products.length), label: "Produtos no ar" },
+          { value: "Web + app", label: "Do clique ao nativo" },
+          { value: "Full-stack", label: "API, dados, cloud" },
+          { value: "Produção", label: "CI, monitor, deploy" },
+        ].map((stat) => (
+          <div
+            key={stat.label}
+            className="bg-background px-6 py-6 sm:px-8 sm:py-8"
+          >
+            <dt className="font-display text-2xl tracking-tight text-ink sm:text-3xl">
+              {stat.value}
+            </dt>
+            <dd className="mt-1 text-sm text-muted">{stat.label}</dd>
+          </div>
+        ))}
+      </dl>
     </section>
   );
 }

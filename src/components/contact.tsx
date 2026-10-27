@@ -1,49 +1,32 @@
-import { Mail, MapPin } from "lucide-react";
-
 export function Contact() {
   return (
-    <section id="contato" className="border-t border-card-border py-20 md:py-28">
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="relative overflow-hidden rounded-3xl border border-card-border bg-gradient-to-br from-card via-card to-gradient-end/20 p-8 md:p-12">
-          <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 glow-orb opacity-80" />
+    <section
+      id="contato"
+      className="scroll-mt-16 border-t border-line bg-ink text-background"
+    >
+      <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+        <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-background/50">
+          003 — Contato
+        </p>
+        <h2 className="mt-6 font-display text-4xl leading-[0.95] tracking-tight md:text-6xl">
+          Tem um produto
+          <br />
+          para tirar do papel?
+        </h2>
+        <p className="mt-6 max-w-xl text-lg text-background/65">
+          MVP, plataforma SaaS ou evolução de algo que já existe. Escreva — a
+          gente responde.
+        </p>
 
-          <div className="relative max-w-2xl">
-            <p className="text-sm font-medium uppercase tracking-widest text-accent-bright">
-              Contato
-            </p>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">
-              Vamos construir algo juntos?
-            </h2>
-            <p className="mt-4 text-lg text-muted">
-              Precisa de um MVP, uma plataforma SaaS ou evolução de um produto
-              existente? Entre em contato e conte sobre o seu projeto.
-            </p>
-
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
-              <a
-                href="mailto:contato@zenvixlabs.app"
-                className="inline-flex items-center gap-3 rounded-xl border border-card-border bg-background/50 px-5 py-3 text-sm transition hover:border-accent/50"
-              >
-                <Mail className="h-5 w-5 text-accent-bright" aria-hidden />
-                <span>
-                  <span className="block text-muted">E-mail</span>
-                  <span className="font-medium text-foreground">
-                    contato@zenvixlabs.app
-                  </span>
-                </span>
-              </a>
-              <div className="inline-flex items-center gap-3 rounded-xl border border-card-border bg-background/50 px-5 py-3 text-sm">
-                <MapPin className="h-5 w-5 text-accent-bright" aria-hidden />
-                <span>
-                  <span className="block text-muted">Domínio</span>
-                  <span className="font-medium text-foreground">
-                    zenvixlabs.app
-                  </span>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <a
+          href="mailto:contato@zenvixlabs.app"
+          className="group mt-12 inline-block font-display text-[clamp(1.6rem,6vw,4.2rem)] leading-[1.05] tracking-tight text-accent transition hover:text-background"
+        >
+          contato@zenvixlabs.app
+          <span className="ml-3 inline-block transition-transform group-hover:translate-x-2">
+            →
+          </span>
+        </a>
       </div>
     </section>
   );

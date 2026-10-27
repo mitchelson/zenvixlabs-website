@@ -1,57 +1,61 @@
-import { Cpu, Layers, Shield } from "lucide-react";
-
 const pillars = [
   {
-    icon: Layers,
-    title: "Arquitetura sólida",
-    text: "Monolitos modulares, APIs REST e integrações pensadas para evoluir com o negócio.",
+    index: "01",
+    title: "Arquitetura que aguenta o segundo ano",
+    text: "APIs, dados e apps pensados para evoluir — sem reescrever o produto quando o uso chega.",
   },
   {
-    icon: Cpu,
-    title: "Stack moderna",
-    text: "Next.js, React Native, NestJS, PostgreSQL e serviços em nuvem — sempre com boas práticas.",
+    index: "02",
+    title: "Stack sóbria, ponta a ponta",
+    text: "Next.js, Expo, NestJS, Postgres e cloud. Escolhemos o que opera bem, não o que brilha no tweet.",
   },
   {
-    icon: Shield,
-    title: "Produção de verdade",
-    text: "Monitoramento, CI/CD e deploy contínuo para manter seus produtos estáveis no ar.",
+    index: "03",
+    title: "Produção, não protótipo eterno",
+    text: "CI, monitoramento e deploy contínuo. O trabalho termina quando está estável no ar — e segue.",
   },
 ];
 
 export function About() {
   return (
-    <section id="sobre" className="border-t border-card-border bg-card/30 py-20 md:py-28">
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="max-w-2xl">
-          <p className="text-sm font-medium uppercase tracking-widest text-accent-bright">
-            Sobre
+    <section id="estudio" className="scroll-mt-16 border-t border-line">
+      <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-[0.9fr_1.1fr] md:py-28">
+        <div>
+          <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-muted">
+            002 — Estúdio
           </p>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">
-            Zenvix Labs
+          <h2 className="mt-4 font-display text-4xl leading-[1.05] tracking-tight text-ink md:text-5xl">
+            Um laboratório
+            <br />
+            <em className="text-accent">que publica.</em>
           </h2>
-          <p className="mt-4 text-lg text-muted leading-relaxed">
-            Somos um estúdio de desenvolvimento de software focado em criar
-            produtos digitais completos — da concepção ao deploy. Atuamos em
-            SaaS, aplicativos mobile e plataformas com inteligência artificial,
-            sempre com design limpo e código sustentável.
-          </p>
         </div>
-
-        <ul className="mt-14 grid gap-6 md:grid-cols-3">
-          {pillars.map(({ icon: Icon, title, text }) => (
-            <li
-              key={title}
-              className="rounded-2xl border border-card-border bg-card p-6 transition hover:border-accent/40 hover:shadow-lg hover:shadow-accent-glow/10"
-            >
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent-glow/20 text-accent-bright">
-                <Icon className="h-5 w-5" aria-hidden />
-              </div>
-              <h3 className="mt-4 font-semibold text-foreground">{title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted">{text}</p>
-            </li>
-          ))}
-        </ul>
+        <p className="max-w-xl text-lg leading-relaxed text-muted">
+          A Zenvix Labs é um estúdio de software. Concebemos o produto, desenhamos
+          a experiência, escrevemos o código e colocamos no ar — SaaS, apps
+          mobile e plataformas com inteligência artificial, com o mesmo critério
+          de ofício.
+        </p>
       </div>
+
+      <ul className="border-t border-line">
+        {pillars.map((pillar) => (
+          <li
+            key={pillar.index}
+            className="border-b border-line last:border-b-0"
+          >
+            <div className="mx-auto grid max-w-6xl gap-4 px-6 py-10 md:grid-cols-[6rem_1fr_1.2fr] md:items-baseline md:gap-10">
+              <span className="font-mono text-xs text-muted">{pillar.index}</span>
+              <h3 className="font-display text-2xl tracking-tight text-ink md:text-3xl">
+                {pillar.title}
+              </h3>
+              <p className="text-[15px] leading-relaxed text-muted">
+                {pillar.text}
+              </p>
+            </div>
+          </li>
+        ))}
+      </ul>
     </section>
   );
 }

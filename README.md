@@ -1,6 +1,6 @@
 # Zenvix Labs — Site institucional
 
-Landing page institucional da **Zenvix Labs**, desenvolvida com Next.js 16 e Tailwind CSS 4.
+Landing institucional da **Zenvix Labs** — estúdio editorial em Next.js 16 e Tailwind CSS 4.
 
 **Domínio de produção:** [zenvixlabs.app](https://zenvixlabs.app)
 
